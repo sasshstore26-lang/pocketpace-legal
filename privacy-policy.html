@@ -38,20 +38,21 @@ footer a{color:var(--muted);}
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: September 1, 2026</p>
+  <p class="updated">Last updated: October 12, 2026</p>
 
   <p class="lead">PocketPace is a budgeting app built to work entirely on your device. This
   policy explains, in plain language, what information the app collects, what it doesn't,
-  and how the two third-party services it uses (Google AdMob and Google Play Billing)
-  handle data on their end.</p>
+  and how the two third-party services it uses (Unity LevelPlay for ads and Google Play
+  Billing) handle data on their end.</p>
 
   <h2>The short version</h2>
   <ul>
     <li>Every expense, budget, category, and task you enter is stored only in a local
     database on your phone. PocketPace has no server and no user accounts — we never
     see this data, and it isn't uploaded anywhere by the app itself.</li>
-    <li>The only network activity PocketPace generates is requesting a banner ad and
-    processing the optional "Remove ads" purchase, both handled by Google.</li>
+    <li>The only network activity PocketPace generates is requesting a banner ad (handled
+    by Unity LevelPlay) and processing the optional "Remove ads" purchase (handled by
+    Google Play).</li>
     <li>You can clear your data at any time from inside the app, or remove all of it by
     uninstalling.</li>
   </ul>
@@ -81,16 +82,17 @@ footer a{color:var(--muted);}
 
   <h2>Information collected automatically</h2>
   <p>PocketPace itself does not use any analytics, crash-reporting, or tracking SDK. The
-  only automatic data collection comes from the two Google services below, which operate
-  under their own privacy policies:</p>
+  only automatic data collection comes from the two third-party services below, which
+  operate under their own privacy policies:</p>
 
   <table>
     <tr><th>Service</th><th>What it's for</th><th>What it may collect</th></tr>
     <tr>
-      <td>Google AdMob</td>
+      <td>Unity LevelPlay (ironSource), including its ad network partners</td>
       <td>Shows a small banner ad on the Trends screen only (never on Home)</td>
-      <td>Advertising ID, general device/app info, and approximate location, used by Google
-      and its ad partners to select and measure ads</td>
+      <td>Advertising ID, general device/app info (such as device model, OS version and
+      language), IP address and approximate location, and ad interactions, used by Unity
+      and its ad partners to select, deliver and measure ads and to prevent ad fraud</td>
     </tr>
     <tr>
       <td>Google Play Billing</td>
@@ -100,11 +102,11 @@ footer a{color:var(--muted);}
     </tr>
   </table>
 
-  <p>You can read more about how Google handles this data here:</p>
+  <p>You can read more about how these companies handle this data here:</p>
   <ul>
-    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-    <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a></li>
-    <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob's data collection &amp; use</a></li>
+    <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity privacy policy for app users (ads)</a></li>
+    <li><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Privacy Policy</a></li>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> (Google Play Billing)</li>
   </ul>
 
   <h2>App permissions</h2>
@@ -113,14 +115,16 @@ footer a{color:var(--muted);}
     <tr><td>Notifications</td><td>To alert you when today's spending nears or crosses your limit. Generated on your device; you can turn this off in Settings.</td></tr>
     <tr><td>Run at device startup</td><td>So scheduled budget alerts still fire after you restart your phone.</td></tr>
     <tr><td>Biometric</td><td>Only used if you enable the optional app lock; see above.</td></tr>
-    <tr><td>Internet / network state</td><td>Needed only for the AdMob banner and Play Billing purchase described above. Every other feature works fully offline.</td></tr>
+    <tr><td>Internet / network state</td><td>Needed only for the banner ad and Play Billing purchase described above. Every other feature works fully offline.</td></tr>
+    <tr><td>Advertising ID</td><td>Lets the ad service show and measure ads. You can reset it or opt out of personalised ads at any time (see "Your choices").</td></tr>
   </table>
 
   <h2>Data sharing and sale</h2>
   <p>We don't sell your information — we don't have any to sell. We don't share data with
   anyone, because PocketPace doesn't collect or transmit your budgeting data in the first
-  place. The only data in play is what Google's AdMob and Play Billing SDKs collect
-  directly, under Google's own privacy policy, not ours.</p>
+  place. The only data in play is what the Unity LevelPlay ads SDK and Google Play Billing
+  collect directly, under Unity's and Google's own privacy policies, not ours. Your
+  budgeting data is never shared with the ad service.</p>
 
   <h2>Data retention and deletion</h2>
   <p>Your data lives on your device for as long as you keep the app installed. You can:</p>
@@ -129,7 +133,8 @@ footer a{color:var(--muted);}
     <li>Delete everything at once by uninstalling the app</li>
   </ul>
   <p>Because we never receive a copy of your data, there is nothing stored on our end to
-  separately delete.</p>
+  separately delete. For data held by the ad service, see Unity's privacy policy linked
+  above.</p>
 
   <h2>Children's privacy</h2>
   <p>PocketPace is a general-audience app and is not directed at children under 13. We do
@@ -140,6 +145,8 @@ footer a{color:var(--muted);}
   <ul>
     <li>Turn off notifications or the biometric lock anytime in Settings</li>
     <li>Remove ads entirely with the one-time in-app purchase</li>
+    <li>Reset your advertising ID or opt out of personalised ads in your phone's settings
+    (usually Settings → Privacy → Ads, or Settings → Google → Ads)</li>
     <li>Export or delete your data as described above</li>
   </ul>
 
@@ -153,7 +160,7 @@ footer a{color:var(--muted);}
 
   <div class="note">
     This policy is written to accurately describe what PocketPace (package
-    <code>com.dailybudget.app</code>) actually does. It's a solid starting point for a Play
+    <code>com.pocketpace.app</code>) actually does. It's a solid starting point for a Play
     Store listing, but it isn't legal advice — if you plan to publish widely or operate in
     regions with specific rules (like GDPR in the EU or CCPA in California), it's worth a
     quick review by a lawyer before launch.
